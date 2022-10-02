@@ -1,0 +1,19 @@
+using System;
+
+namespace donguler_while_forech
+{
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            String[] arabalar = {"bmw", "ford" , "Nissan"};
+
+            foreach (var araba in arabalar)
+            {
+                System.Console.WriteLine(araba);
+            }
+        }
+
+        
+    }
+}
