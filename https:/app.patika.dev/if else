@@ -1,0 +1,15 @@
+int time = DateTime.Now.Hour;
+if(time>= 5 && time<11)
+Console.WriteLine("Günaydınn!");
+else if(time>=11 && time<=18)
+Console.WriteLine("İyi Günler!");
+else if(time>18 && time<=22)
+Console.WriteLine("İyi Akşamlar!");
+else
+Console.WriteLine("İyi Akşamlar!");
+
+string sonuc = time<=18 ? "İyi günler!" : "İyi Geceler";
+
+sonuc = time>=6 && time<11 ? "Günaydın!" : time<=18 ? "İyi günler!" : "İyi Geceler";
+
+Console.WriteLine(sonuc);
