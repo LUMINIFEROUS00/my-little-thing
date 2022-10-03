@@ -1,0 +1,35 @@
+int a = 2;
+int b = 3;
+
+Console.WriteLine(a + b);
+
+int total = Topla(a, b);
+Console.WriteLine(total);
+
+Methods sample = new Methods();
+sample.EkranaYazdir(Convert.ToString(total));
+Console.WriteLine(a + b);
+
+int total2 = sample.ArttırVeTopla(a, b);
+sample.EkranaYazdir(Convert.ToString(total2));
+sample.EkranaYazdir(Convert.ToString(a + b));
+
+static int Topla(int x1, int x2)
+{
+    return (x1 + x2);
+}
+
+class Methods
+{
+    public void EkranaYazdir(string veri)
+    {
+        Console.WriteLine(veri);
+    }
+
+    public int ArttirVeTopla(ref int x1, ref int x2)
+    {
+        x1 += 1;
+        x2 += 1;
+        return x1 + x2;
+    }
+}
