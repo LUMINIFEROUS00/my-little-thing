@@ -1,0 +1,43 @@
+string num = "999";
+int outNum;
+
+bool result = int.TryParse(num, out outNum);
+if (result)
+{
+    Console.WriteLine("Başarılı!");
+    Console.WriteLine(outNum);
+}
+else
+{
+    Console.WriteLine("Başarısız!");
+}
+
+Methods instance = new Methods();
+instance.Sum(2,3, out int total2);
+Console.WriteLine(total2);
+ 
+int number = 999;
+instance.printScreen(Convert.ToString(number));
+instance.printScreen(number);
+
+
+
+class Methods
+{
+    public void Sum(int x, int y, out int total)
+    {
+        total = x + y;
+    }
+    public void printScreen(string data)
+    {
+        Console.WriteLine(data);
+    }
+    public void printScreen(int data)
+    {
+        Console.WriteLine(data);
+    }
+    public void printScreen(string data1, string data2)
+    {
+        Console.WriteLine(data1 + data2);
+    }
+}
